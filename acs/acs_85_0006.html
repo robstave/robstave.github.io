@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b class="acs_heading">ACS-85-0006</b> Square wave VCO with randomness added to period
+                <a class="pull-right" href="https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0006">
+                    <img src="lib/github.png">&nbsp;Github
+                </a>
+            </div>
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-lg-8">
+
+                        <p>Basically, makes a fuzzy sounding square wave.</p>
+
+                        <p><b>PB0</b> The first pin, PB0 is the pure squarewave. 50% duty cycle. This is calculated with counters that flip the bit every x interrupts.</p>
+
+                        <p><b>PB1</b> PB1 is calculated the same way, except that in addition to the usual next count, a random number is added making the square a little longer or shorter. The number is found using the LFSR. so you are getting a fixed period +/- a random number. </p>
+
+                        <p>On average, the length is what the first pin is set for, so they sound similar.</p>
+
+                        <p><b>PB2</b> PB2 is a bit more deterministic in adding the length. It sounds a bit more like a fast ramp on the frequency. Each cycle is the previous count + 1 up to about 30 I think.</p>
+
+                        <p>What you get is a square wave with some power in near frequencies. In this case, it sounds more fuzzy</p>
+
+                        <div>
+                            <img style="width: 80%; height: 80%" src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0006/images/ACS-85-0006-period.png">
+                        </div>
+
+
+                        <div>
+                            <a href="https://soundcloud.com/user-692410397/85-0006a">
+                                <img src="lib/soundcloud.png"> 85-0006 with pure square wave and modulated
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0006/images/ACS-85-0006.png">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

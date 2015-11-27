@@ -1,0 +1,92 @@
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><b class="acs_heading">ACS-85-0004</b> 
+			    Two Square wave VCOs with Selectable range (LF to HF)
+				<a class="pull-right" href="https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004" >
+				<img src="lib/github.png" >&nbsp;Github
+				</a>
+			  </div>
+              <div class="panel-body">
+			    <div class="row">
+                    <div class="col-lg-8">
+		      <p>Perhaps a bit more utilitarian than others.  
+                 Two vcos with an analog pin to select the range from one of 6 ranges.  High Freq 1, High Freq 2, Medium Freq 1, Medium Freq 2 and Low Freq 1 and 2.</p>
+
+				 
+ 
+ 
+<table class="table table-striped">
+<tr>
+<td><b>Range</b></td>
+<td><b>Low</b></td>
+<td><b>High</b></td>
+</tr>
+
+<tr>
+<td>HF1</td>
+<td>250 Hz</td>
+<td>4Khz</td>
+</tr>
+
+<tr>
+<td>HF2</td>
+<td>166 Hz </td>
+<td>666 Hz</td>
+</tr>
+
+<tr>
+<td>MF1</td>
+<td>62.5 Hz</td>
+<td>222 Hz</td>
+</tr>
+
+<tr>
+<td>MF2</td>
+<td>38.5 Hz </td>
+<td>133 Hz</td>
+</tr>
+
+<tr>
+<td>LF1</td>
+<td>1 Hz  </td>
+<td>16 Hz</td>
+</tr>
+
+<tr>
+<td>LF2</td>
+<td>.2 Hz</td>
+<td>4 Hz</td>
+</tr>
+
+
+</table>
+ 
+
+<p>You can change the values, but keep in mind the HF and MF counter is an Integer.
+For the low frequencies, the code was placed in another loop.  Changing the int to a long did not work well and I could not get above 1.5Khz.  I think this is because the work in the interrupt handler for longs takes way more clock cycles.
+I also ended up copying the counter code for the LFO branch rather than add complexity (and clock cycles) making a handler that looks tight.</p>
+
+ 
+			  
+			    <p>Here is an equivalent</p>
+			    <div>
+			      <img 
+				  style="width: 20%; height: 20%"
+				  src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004/images/ACS-85-0004-overview.png"> 
+			    </div>
+	 
+ 
+
+  </div>
+                    <div class="col-lg-4">
+								      <img src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0004/images/ACS-85-0004.png">
+
+                    </div>
+                </div>
+
+		 
+              </div>
+            </div>
+          </div>
+        </div>
