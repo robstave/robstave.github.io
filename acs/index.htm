@@ -2,38 +2,52 @@
 <html lang="en">
 
 
-   <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-        <meta charset="utf-8">
-        <title>Arduino Component Sketches</title>
-        <meta name="generator" content="Bootply">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Uses a fixed left sidebar, that attaches after scrolling past a large top header. Scrollspy menu.">
-        <link href="lib/bootstrap.css" rel="stylesheet">
-        
-        <!--[if lt IE 9]>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Arduino Component Sketches</title>
+    <meta name="generator" content="Bootply">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Uses a fixed left sidebar, that attaches after scrolling past a large top header. Scrollspy menu.">
+    <link href="lib/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link rel="apple-touch-icon" href="http://www.bootply.com/bootstrap/img/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="http://www.bootply.com/bootstrap/img/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="http://www.bootply.com/bootstrap/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" href="http://www.bootply.com/bootstrap/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.bootply.com/bootstrap/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.bootply.com/bootstrap/img/apple-touch-icon-114x114.png">
 
 
-		  <script src="lib/angular.min.js"></script>
-         <script src="script.js"></script>
-  
-
-
+    <script src="lib/angular.min.js"></script>
+    <script src="script.js"></script>
 
 
 
 
-
-
-        <!-- CSS code from Bootply.com editor -->
+    <style type="text/css">
+        .acs_heading {
+            font-weight: bold;
+        }
         
-        <style type="text/css">
-            /*
+        .acs_title {
+            padding-left: 10px;
+            font-weight: bold;
+            color: #191970;
+        }
+		
+		.github_image {
+		padding-left: 5px;
+		}
+    </style>
+
+
+
+
+    <!-- CSS code from Bootply.com editor -->
+
+    <style type="text/css">
+        /*
 A Bootstrap 3.1 affix sidebar template
 from http://bootply.com
 
@@ -43,430 +57,342 @@ in your HTML file.
 license: MIT
 author: bootply.com
 */
-
-body {
- padding-top:50px;
-}
-
-#masthead { 
- min-height:250px;
-}
-
-#masthead h1 {
- font-size: 30px;
- line-height: 1;
- padding-top:20px;
-}
-
-#masthead .well {
- margin-top:8%;
-}
-
-@media screen and (min-width: 768px) {
-  #masthead h1 {
-    font-size: 50px;
-  }
-}
-
-.navbar-bright {
- background-color:#111155;
- color:#fff;
-}
-
-.affix-top,.affix{
- position: static;
-}
-
-@media (min-width: 979px) {
-  #sidebar.affix-top {
-    position: static;
-  	margin-top:30px;
-  	width:228px;
-  }
-  
-  #sidebar.affix {
-    position: fixed;
-    top:70px;
-    width:228px;
-  }
-}
-
-#sidebar li.active {
-  border:0 #eee solid;
-  border-right-width:5px;
-}
-
-        </style>
-    </head>
-    
-    <!-- HTML code from Bootply.com editor -->
-    
-    <body ng-app="main" ng-controller="MyController">
         
-        <nav class="navbar navbar-default navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="http://www.bootply.com/" class="navbar-brand">Bootply</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#sec">Get Started</a>
-        </li>
-        <li>
-          <a href="#sec">Edit</a>
-        </li>
-        <li>
-          <a href="#sec">Visualize</a>
-        </li>
-        <li>
-          <a href="#sec">Prototype</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</nav>
+        body {
+            padding-top: 50px;
+        }
+        
+        #masthead {
+            min-height: 250px;
+        }
+        
+        #masthead h1 {
+            font-size: 30px;
+            line-height: 1;
+            padding-top: 20px;
+        }
+        
+        #masthead .well {
+            margin-top: 8%;
+        }
+        
+        @media screen and (min-width: 768px) {
+            #masthead h1 {
+                font-size: 50px;
+            }
+        }
+        
+        .navbar-bright {
+            background-color: #111155;
+            color: #fff;
+        }
+        
+        .affix-top,
+        .affix {
+            position: static;
+        }
+        
+        @media (min-width: 979px) {
+            #sidebar.affix-top {
+                position: static;
+                margin-top: 30px;
+                width: 228px;
+            }
+            #sidebar.affix {
+                position: fixed;
+                top: 70px;
+                width: 228px;
+            }
+        }
+        
+        #sidebar li.active {
+            border: 0 #eee solid;
+            border-right-width: 5px;
+        }
+    </style>
+</head>
 
-<div id="masthead">  
-  <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h1>Arduino Component Sketches
+<!-- HTML code from Bootply.com editor -->
+
+<body ng-app="main" ng-controller="MyController" data-offset="170" data-target="#navbar">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://robstave.github.io/acs/" class="navbar-brand">ACS</a>
+            </div>
+            <nav class="collapse navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://github.com/robstave/ArduinoComponentSketches/wiki/Requirements-and-Setup">Requirements</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>Arduino Component Sketches
             <p class="lead">For ATTiny85 and ATTiny84</p>
           </h1>
-        </div>
-        <div class="col-md-5">
-            <div class="well well-lg"> 
-              <div class="row">
-                <div class="col-sm-6">
-        	      	<img src="lib/180x100.png" class="img-responsive">
                 </div>
-                <div class="col-sm-6">
-	              	Some text here
+                <div class="col-md-5">
+                    <div class="well well-lg">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="lib/180x100.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-6">
+                                Sketches for audio circuits
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
-      </div> 
-  </div><!--/container-->
-</div><!--/masthead-->
+        <!--/container-->
+    </div>
+    <!--/masthead-->
 
-<!--main-->
-<div class="container">
+    <!--main-->
+    <div class="container">
 
 
-	<div class="row">
-	
-	
-      <!--left-->
-      <div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked affix-top" id="sidebar">
-	
-          <li class="active"><a href="#intro">Intro</a></li>
-          <li class=""><a href="#requirements">Requirements</a></li>
-          <li class=""><a href="#85_vco">ATTiny85 VCO/LFO</a></li>
-          <li class=""><a href="#85_vca">ATTiny85 VCA/Envelope Generators</a></li>
-          <li class=""><a href="#85_mod">ATTiny85 Modulation, Dividers, Gates</a></li>
-		  <li class=""><a href="#85_comp">ATTiny85 Components, Shifters, Delay</a></li>
-		  <li class=""><a href="#85_interface">ATTiny85 Interface, Midi, Visualization</a></li>
-		    <li class=""><a href="#85_other">ATTiny85 Other</a></li>
-        </ul>
-      </div>
-	  
-	  <!--/left-->
-      
- 
+        <div class="row">
 
-	  
-	  
-	  
-	  
-      <!--right-->
-      <div class="col-md-9">
-	  
- 
-			
-	  
-        <h2 id="intro">Intro</h2>
-        <p> To do intro</p>
-        <hr>
-        <p> stuff</p>
 
-        <h2 id="requirements">Requirements</h2>
-        <p> Ability to program ATTiny chips. This only requires an arduino uno and a breadboard.</p>
-        <hr>
-        <p> 
-		Link to the Wiki is <a hfer="https://github.com/robstave/ArduinoComponentSketches/wiki/Requirements-and-Setup">here</a>
-		</p>
+            <!--left-->
+            <div class="col-md-3" id="leftCol">
+                <ul class="nav nav-stacked affix-top" id="sidebar">
+
+                    <li class="active"><a href="#intro">Intro</a></li>
+                    <li class=""><a href="#requirements">Requirements</a></li>
+                    <li class=""><a href="#85vco">ATTiny85 VCO/LFO</a></li>
+                    <li class=""><a href="#85vca">ATTiny85 VCA/Envelope Generators</a></li>
+                    <li class=""><a href="#85mod">ATTiny85 Modulation, Dividers, Gates</a></li>
+                    <li class=""><a href="#85comp">ATTiny85 Components, Shifters, Delay</a></li>
+                    <li class=""><a href="#85interface">ATTiny85 Interface, Midi, Visualization</a></li>
+                    <li class=""><a href="#85other">ATTiny85 Other</a></li>
+                </ul>
+            </div>
+
+            <!--/left-->
 
 
 
 
 
+            <!--right-->
+            <div class="col-md-9">
 
 
-        
-        <h2 id="85_vco">ATTiny 85 VCO and LFO</h2>
-        <p>
-          Simple sketches that act as VCO, LFO and oscillators.  Some complex tones are here as well if there is room for a pin, but generally anything more than a two tone siren sound is going to be a component.
-        </p>
-    
-	     <hr>
-		 
-		 <div ng-include="'acs_85_0001.html'"></div>
-		 <div ng-include="'acs_85_0002.html'"></div>
-		 <div ng-include="'acs_85_0003.html'"></div>
-   		 <div ng-include="'acs_85_0004.html'"></div>
-   		 <div ng-include="'acs_85_0005.html'"></div>
-         <div ng-include="'acs_85_0006.html'"></div>
- 
-         <!--
-		 <div ng-include="'acs_85_0007.html'"></div>
-		 <div ng-include="'acs_85_0008.html'"></div>
-		  -->
-		 <div ng-include="'acs_85_0010.html'"></div>
-		 <div ng-include="'acs_85_0011.html'"></div>
-		 <div ng-include="'acs_85_0012.html'"></div>
-		
-		
-		       <!--
-		 <div ng-include="'acs_85_0020.html'"></div>
-		  -->
-		
-		
-		
-		
-		
-		
-	      <h2 id="85_vca">ATTiny 85 VCA</h2>
-        <p>
-          Envelope generators, VCA
-        </p>
-		<hr>
-   
-		
-		
-		
-		
-	    <h2 id="85_mod">ATTiny 85 Modulation</h2>
-        <p>
-          Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato
-        </p>
-		
-		<div ng-include="'acs_85_0305.html'"></div>
-		<!--
-		<div ng-include="'acs_85_0306.html'"></div>
-		<div ng-include="'acs_85_0307.html'"></div>
-		<div ng-include="'acs_85_0308.html'"></div>
-		-->
-        <hr>
-		
-		
+
+
+                <h2 id="intro">Intro</h2>
+                <p> To do intro</p>
+                <hr>
+                <p> stuff</p>
+
+                <h2 id="requirements">Requirements</h2>
+                <p> Ability to program ATTiny chips. This only requires an arduino uno and a breadboard.</p>
+                <hr>
+                <p>
+                    Link to the Wiki is <a hfer="https://github.com/robstave/ArduinoComponentSketches/wiki/Requirements-and-Setup">here</a>
+                </p>
+
+
+
+
+
+                <h2 id="85vco">ATTiny 85 VCO and LFO</h2>
+                <p>
+                    Simple sketches that act as VCO, LFO and oscillators. Some complex tones are here as well if there is room for a pin, but generally anything more than a two tone siren sound is going to be a component.
+                </p>
+
+                <hr>
+
+                <div data-ng-include data-src="'acs_85_0001.html'"></div>
+                <div data-ng-include data-src="'acs_85_0002.html'"></div>
+                <div data-ng-include data-src="'acs_85_0003.html'"></div>
+                <div data-ng-include data-src="'acs_85_0004.html'"></div>
+                <div data-ng-include data-src="'acs_85_0005.html'"></div>
+                <div data-ng-include data-src="'acs_85_0006.html'"></div>
+                <div data-ng-include data-src="'acs_85_0007.html'"></div>
+                <div data-ng-include data-src="'acs_85_0008.html'"></div>
+                <div data-ng-include data-src="'acs_85_0010.html'"></div>
+                <div data-ng-include data-src="'acs_85_0011.html'"></div>
+                <div data-ng-include data-src="'acs_85_0012.html'"></div>
+
+
+                <!--
+		         <div data-ng-include data-src="'acs_85_0012.html'"></div>
+		        -->
+
+
+
+
+
+                <h2 id="85vca">ATTiny 85 VCA</h2>
+                <p>
+                    Envelope generators, VCA
+                </p>
+                <hr>
+
+
+
+
+
+                <h2 id="85mod">ATTiny 85 Modulation</h2>
+                <p>
+                    Modulation. Adders, Mixers, dividers, Multiplexers, Gates, Vibrato
+                </p>
+
+                <div data-ng-include data-src="'acs_85_0305.html'"></div>
+                <div data-ng-include data-src="'acs_85_0306.html'"></div>
+                <div data-ng-include data-src="'acs_85_0307.html'"></div>
+                <div data-ng-include data-src="'acs_85_0308.html'"></div>
+
+				   <!--
+		         <div data-ng-include data-src="'acs_85_0320.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0321.html'"></div>
+                 <div data-ng-include data-src="'acs_85_0322.html'"></div>
+
+				 
+				 <div data-ng-include data-src="'acs_85_0350.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0351.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0352.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0353.html'"></div>
+		        -->
 				
-	    <h2 id="85_comp">ATTiny 85 Components</h2>
-        <p>
-          Shift, Delay, Samplers, Melody Makers, Atari Punk Console.
-        </p>
-		<p>Things that are generally more complex than a simple vca, vco and so on.
-		</p>
-				 <div ng-include="'acs_85_0520.html'"></div>
-<div ng-include="'acs_85_0521.html'"></div>
-<div ng-include="'acs_85_0522.html'"></div>
-<div ng-include="'acs_85_0550.html'"></div>
-<div ng-include="'acs_85_0551.html'"></div>
-<div ng-include="'acs_85_0552.html'"></div>
-
-<div ng-include="'acs_85_0600.html'"></div>
-<div ng-include="'acs_85_0601.html'"></div>
-
-       <hr>
-		
-		
-		
-		
-		
-	    <h2 id="85_interface">ATTiny 85 Interface</h2>
-        <p>
-          Interface, Control, Midi, Visualization
-        </p>
-		 
-        <hr>
-		
-		
- 
-		
-		
-		<h2 id="85_interface">ATTiny 85 Other</h2>
-        <p>
-          def.
-        </p>
-       <hr>
-		
-		
-        
-        <hr>
-        <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>
-        <hr>
-
-        </div><!--/right-->
-  	</div><!--/row-->
-</div><!--/container-->
+                <hr>
 
 
 
-        
-        <script src="lib/analytics.js" async=""></script><script type="text/javascript" src="lib/jquery.js"></script>
+                <h2 id="85comp">ATTiny 85 Components</h2>
+                <p>
+                    Shift, Delay, Samplers, Melody Makers, Atari Punk Console.
+                </p>
+                <p>Things that are generally more complex than a simple vca, vco and so on.
+                </p>
+				  <!--
+		         <div data-ng-include data-src="'acs_85_0500.html'"></div>
+				 		         <div data-ng-include data-src="'acs_85_0510.html'"></div>
+                 <div data-ng-include data-src="'acs_85_0511.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0512.html'"></div>
+				 -->
+                <div data-ng-include data-src="'acs_85_0520.html'"></div>
+                <div data-ng-include data-src="'acs_85_0521.html'"></div>
+                <div data-ng-include data-src="'acs_85_0522.html'"></div>
+                <div data-ng-include data-src="'acs_85_0550.html'"></div>
+                <div data-ng-include data-src="'acs_85_0551.html'"></div>
+                <div data-ng-include data-src="'acs_85_0552.html'"></div>
 
+                <div data-ng-include data-src="'acs_85_0600.html'"></div>
+                <div data-ng-include data-src="'acs_85_0601.html'"></div>
 
-        <script type="text/javascript" src="lib/bootstrap.js"></script>
+                <hr>
 
 
 
 
 
+                <h2 id="85interface">ATTiny 85 Interface</h2>
+                <p>
+                    Interface, Control, Midi, Visualization
+                </p>
 
-        
-        <!-- JavaScript jQuery code from Bootply.com editor  -->
-        
-        <script type="text/javascript">
-        
-        $(document).ready(function() {
-        
-            /* activate sidebar */
-$('#sidebar').affix({
-  offset: {
-    top: 235
-  }
-});
+				<!--
+		         <div data-ng-include data-src="'acs_85_0700.html'"></div>
+				 		         <div data-ng-include data-src="'acs_85_0705.html'"></div>
+                 <div data-ng-include data-src="'acs_85_0710.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0711.html'"></div>
+				 -->
+				 
+                <hr>
 
-/* activate scrollspy menu */
-var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
 
-$body.scrollspy({
-	target: '#leftCol',
-	offset: navHeight
-});
 
-/* smooth scrolling sections */
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 50
-        }, 1000);
-        return false;
-      }
-    }
-});
-        
-        });
-        
-        </script>
-        
- 
-        
-        
-        <style>
-            .ad {
-              position: absolute;
-              bottom: 70px;
-              right: 48px;
-              z-index: 992;
-              background-color:#f3f3f3;
-              position: fixed;
-              width: 155px;
-              padding:1px;
-            }
-            
-            .ad-btn-hide {
-              position: absolute;
-              top: -10px;
-              left: -12px;
-              background: #fefefe;
-              background: rgba(240,240,240,0.9);
-              border: 0;
-              border-radius: 26px;
-              cursor: pointer;
-              padding: 2px;
-              height: 25px;
-              width: 25px;
-              font-size: 14px;
-              vertical-align:top;
-              outline: 0;
-            }
-            
-            .carbon-img {
-              float:left;
-              padding: 10px;
-            }
-            
-            .carbon-text {
-              color: #888;
-              display: inline-block;
-              font-family: Verdana;
-              font-size: 11px;
-              font-weight: 400;
-              height: 60px;
-              margin-left: 9px;
-              width: 142px;
-              padding-top: 10px;
-            }
-            
-            .carbon-text:hover {
-              color: #666;
-            }
-            
-            .carbon-poweredby {
-              color: #6A6A6A;
-              float: left;
-              font-family: Verdana;
-              font-size: 11px;
-              font-weight: 400;
-              margin-left: 10px;
-              margin-top: 13px;
-              text-align: center;
-            }
-        </style>
-        <div style="height: 2px;" class="ad collapse">
-          <button class="ad-btn-hide collapsed" data-toggle="collapse" data-target=".ad">×</button>
-          <script async="" type="text/javascript" src="lib/carbon.js" id="_carbonads_js"></script>
+
+
+                <h2 id="85other">ATTiny 85 Other</h2>
+                <p>
+                   Wacky and wierd stuff
+                </p>
+                <hr>
+
+
+
+                <hr>
+                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>
+                <hr>
+
+            </div>
+            <!--/right-->
         </div>
-        
-		
-		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-<script type="text/javascript">
-  (function(){
-    var widgetIframe = document.getElementById('sc-widget'),
-        widget       = SC.Widget(widgetIframe);
+        <!--/row-->
+    </div>
+    <!--/container-->
 
-    widget.bind(SC.Widget.Events.READY, function() {
-      widget.bind(SC.Widget.Events.PLAY, function() {
-        // get information about currently playing sound
-        widget.getCurrentSound(function(currentSound) {
-          console.log('sound ' + currentSound.get('') + 'began to play');
+
+
+
+    <script src="lib/analytics.js" async=""></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.js"></script>
+
+
+    <!-- JavaScript jQuery code from Bootply.com editor  -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            /* activate sidebar */
+            $('#sidebar').affix({
+                offset: {
+                    top: 235
+                }
+            });
+
+            /* activate scrollspy menu */
+            var $body = $(document.body);
+            var navHeight = $('.navbar').outerHeight(true) + 10;
+
+            $body.scrollspy({
+                target: '#leftCol',
+                offset: navHeight
+            });
+
+            /* smooth scrolling sections */
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 50
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+
         });
-      });
-      // get current level of volume
-      widget.getVolume(function(volume) {
-        console.log('current volume value is ' + volume);
-      });
-      // set new volume level
-      widget.setVolume(50);
-      // get the value of the current position
-    });
-
-  }());
-</script>
+    </script>
 
 
-    
-</body></html>
+
+
+
+</body>
+
+</html>
