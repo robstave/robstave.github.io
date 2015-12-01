@@ -60,7 +60,9 @@ author: bootply.com
         
         body {
             padding-top: 50px;
+			 position: relative;
         }
+ 
         
         #masthead {
             min-height: 250px;
@@ -104,17 +106,19 @@ author: bootply.com
                 width: 228px;
             }
         }
-        
-        #sidebar li.active {
-            border: 0 #eee solid;
+       /*
+         #sidebar li.active {
+            border: 0 #bbe solid;
             border-right-width: 5px;
         }
+		*/
+		 
     </style>
 </head>
 
 <!-- HTML code from Bootply.com editor -->
 
-<body ng-app="main" ng-controller="MyController" data-offset="170" data-target="#navbar">
+<body ng-app="main" ng-controller="MyController" data-spy="scroll" data-target="#sidebar">   
 
     <nav class="navbar navbar-default navbar-fixed-top" role="banner">
         <div class="container">
@@ -235,7 +239,7 @@ author: bootply.com
 
 
                 <!--
-		         <div data-ng-include data-src="'acs_85_0012.html'"></div>
+		         <div data-ng-include data-src="'acs_85_0020.html'"></div>
 		        -->
 
 
@@ -262,17 +266,17 @@ author: bootply.com
                 <div data-ng-include data-src="'acs_85_0307.html'"></div>
                 <div data-ng-include data-src="'acs_85_0308.html'"></div>
 
-				   <!--
+				  
 		         <div data-ng-include data-src="'acs_85_0320.html'"></div>
 				 <div data-ng-include data-src="'acs_85_0321.html'"></div>
                  <div data-ng-include data-src="'acs_85_0322.html'"></div>
-
+  
 				 
 				 <div data-ng-include data-src="'acs_85_0350.html'"></div>
 				 <div data-ng-include data-src="'acs_85_0351.html'"></div>
 				 <div data-ng-include data-src="'acs_85_0352.html'"></div>
 				 <div data-ng-include data-src="'acs_85_0353.html'"></div>
-		        -->
+		        
 				
                 <hr>
 
@@ -312,12 +316,11 @@ author: bootply.com
                     Interface, Control, Midi, Visualization
                 </p>
 
-				<!--
+				
 		         <div data-ng-include data-src="'acs_85_0700.html'"></div>
-				 		         <div data-ng-include data-src="'acs_85_0705.html'"></div>
+				 <div data-ng-include data-src="'acs_85_0705.html'"></div>
                  <div data-ng-include data-src="'acs_85_0710.html'"></div>
 				 <div data-ng-include data-src="'acs_85_0711.html'"></div>
-				 -->
 				 
                 <hr>
 
@@ -327,7 +330,7 @@ author: bootply.com
 
                 <h2 id="85other">ATTiny 85 Other</h2>
                 <p>
-                   Wacky and wierd stuff
+                   Wacky and weird stuff
                 </p>
                 <hr>
 
@@ -346,8 +349,7 @@ author: bootply.com
 
 
 
-
-    <script src="lib/analytics.js" async=""></script>
+ 
     <script type="text/javascript" src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/bootstrap.js"></script>
 
@@ -367,6 +369,9 @@ author: bootply.com
             /* activate scrollspy menu */
             var $body = $(document.body);
             var navHeight = $('.navbar').outerHeight(true) + 10;
+			
+			console.log('navHeight',navHeight);
+			navHeight=500;
 
             $body.scrollspy({
                 target: '#leftCol',

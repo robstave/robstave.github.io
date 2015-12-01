@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b class="acs_heading">ACS-85-0700</b> <span class="acs_title">Analog to Digital Decoder</span>
+                <a class="pull-right" href="https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700">
+                    <img src="lib/github.png"/>&nbsp;Github
+                </a>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p> This sketch takes an analog input and converts it to a digital output on 3 pins.
+Either as a single pin or 3 bit binary mode. </p>
+
+<p><b>Binary mode (PB4 = HIGH)</b>
+It is really just a 3 bit AD converter.
+The value on the analog pin is converted to 3 bits.
+{000, 001, 010, ..., 111} </p>
+  
+  			    <div>
+			      <img 
+				   
+				  src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/mode2.png"/>
+			    </div>
+				
+				
+
+<p><b>Single select mode  (PB4 = Low)</b>
+The value converts to one of three values.
+{001, 010, 100}
+Can be used to select things as well.
+This can be used to convert a pot to control channels, gates or whatever. An example below uses the sketch and nands to make a signal selector.</p>
+
+  			    <div>
+			      <img 
+ 				  src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/mode1.png"/>
+			    </div>
+				
+
+                         
+                     
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0700/images/acs-85-0700.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
