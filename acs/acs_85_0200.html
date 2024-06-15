@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b class="acs_heading">ACS-85-0200</b> <span class="acs_title">VCA Simple<span>
+                        <a class="pull-right"
+                            href="https://github.com/robstave/ArduinoComponentSketches/tree/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200">
+                            <img src="lib/github.png">&nbsp;Github
+                        </a>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p>Simple VCA </p>
+                        <p> Lunetta Style VCA. Rather than controlling an input with a Control voltage...the control
+                            voltage is Chopped up by the input. This only works with squarewave audio.</p>
+
+                        <p>Again, its not like you can control a sine wave with a ramp. Instead, say you have a square
+                            wave 440hz. The value of the input CV is reflected in the output as PWM AND its anded with
+                            the input square.
+
+                            Not amazing but effective in lunettas.
+
+                        </p>
+
+                        <p>Note, this is not a good sketch for LOW frequency values. The Interrupt is just listening for
+                            changes in the state, so it is not particularly interested in the actual high/low value. If
+                            this is what you need, then you should read the value.
+                        </p>
+                        <p>See a good example of this on
+                            [hackaday](https://hackaday.com/2015/04/10/logic-noise-more-cmos-cowbell/)
+                        </p>
+
+
+
+                        <p>Here is an equivalent</p>
+                        <div>
+                            <img style="width: 50%; height: 50%"
+                                src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200/images/circuit.png">
+                        </div>
+                        <p>PB0 is only going to xor the first 2 bits and PB1 adds the next one.</p>
+
+
+                    </div>
+                    <div class="col-lg-4">
+                        <img
+                            src="https://raw.githubusercontent.com/robstave/ArduinoComponentSketches/master/ACS-85%20ATTiny85%20sketches/ACS-85-0200/images/acs-85-0200.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
